@@ -16,7 +16,12 @@ const processEntries = (data) => {
   };
 
 
-const t1 = performance.now();
+  
+  console.log(processEntries(data))
 
-console.log(processEntries(data))
-console.log(`Elapsed: ` + (t1 - t0));
+const t1 = performance.now();
+console.log(`Part 1: ${(t1 - t0).toFixed(2)}ms`);
+
+const t2 = performance.now();
+console.log(`Part 2: ${(t2 - t1).toFixed(2)}ms`);
+console.log(`Total: ${(t2 - t0).toFixed(2)}ms`);
